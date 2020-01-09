@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<title>User Management Application</title>
+<title>Blog</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -17,13 +17,13 @@
 		<nav class="navbar navbar-expand-md navbar-dark"
 			style="background-color: tomato">
 			<div>
-				<a href="https://www.javaguides.net" class="navbar-brand"> Todo
-					App</a>
+				<a href="https://www.focusacademy.in/" class="navbar-brand"> Blog
+					</a>
 			</div>
 
 			<ul class="navbar-nav">
 				<li><a href="<%=request.getContextPath()%>/list"
-					class="nav-link">Todos</a></li>
+					class="nav-link">Older Blogs</a></li>
 			</ul>
 
 			<ul class="navbar-nav navbar-collapse justify-content-end">
@@ -37,20 +37,20 @@
 		<!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
 
 		<div class="container">
-			<h3 class="text-center">List of Todos</h3>
+			<h3 class="text-center">List of Blogs</h3>
 			<hr>
 			<div class="container text-left">
 
 				<a href="<%=request.getContextPath()%>/new"
-					class="btn btn-success">Add Todo</a>
+					class="btn btn-success">Add Blog</a>
 			</div>
 			<br>
 			<table class="table table-bordered">
 				<thead>
 					<tr>
 						<th>Title</th>
-						<th>Target Date</th>
-						<th>Todo Status</th>
+						<th>Posted Date</th>
+						<th>Blog Status</th>
 						<th>Actions</th>
 					</tr>
 				</thead>

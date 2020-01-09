@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
-<title>User Management Application</title>
+<title>Blog</title>
 
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,13 +18,12 @@
 		<nav class="navbar navbar-expand-md navbar-dark"
 			style="background-color: tomato">
 			<div>
-				<a href="https://www.javaguides.net" class="navbar-brand"> Todo
-					App</a>
+				<a href="https://www.focusacademy.in/" class="navbar-brand"> Blog</a>
 			</div>
 
 			<ul class="navbar-nav">
 				<li><a href="<%=request.getContextPath()%>/list"
-					class="nav-link">Todos</a></li>
+					class="nav-link">Blog</a></li>
 			</ul>
 
 			<ul class="navbar-nav navbar-collapse justify-content-end">
@@ -46,10 +45,10 @@
 				<caption>
 					<h2>
 						<c:if test="${todo != null}">
-            			Edit Todo
+            			Edit Blog
             		</c:if>
 						<c:if test="${todo == null}">
-            			Add New Todo
+            			Add New Blog
             		</c:if>
 					</h2>
 				</caption>
@@ -59,19 +58,19 @@
 				</c:if>
 
 				<fieldset class="form-group">
-					<label>Todo Title</label> <input type="text"
+					<label>Blog Title</label> <input type="text"
 						value="<c:out value='${todo.title}' />" class="form-control"
 						name="title" required="required" minlength="5">
 				</fieldset>
 
 				<fieldset class="form-group">
-					<label>Todo Decription</label> <input type="text"
+					<label>Blog Decription</label> <input type="text"
 						value="<c:out value='${todo.description}' />" class="form-control"
 						name="description" minlength="5">
 				</fieldset>
 
 				<fieldset class="form-group">
-					<label>Todo Status</label> <select class="form-control"
+					<label>Blog Status</label> <select class="form-control"
 						name="isDone">
 						<option value="false">In Progress</option>
 						<option value="true">Complete</option>
@@ -79,7 +78,7 @@
 				</fieldset>
 
 				<fieldset class="form-group">
-					<label>Todo Target Date</label> <input type="date"
+					<label>Blog Date</label> <input type="date"
 						value="<c:out value='${todo.targetDate}' />" class="form-control"
 						name="targetDate" required="required">
 				</fieldset>
